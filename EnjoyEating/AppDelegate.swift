@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let userD:UserDefaults = UserDefaults()
+        let logged = userD.bool(forKey: "logged")
+        if(logged){
+            
+            let principal = UIStoryboard(name: "Principal", bundle:nil)
+            let principalController = principal.instantiateViewController(withIdentifier: "nav")
+            
+            window?.rootViewController = principalController
+        }
+        
         return true
     }
 

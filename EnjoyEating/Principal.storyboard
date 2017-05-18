@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wgd-Ym-ENK">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="lzh-Em-5H0">
+            <objects>
+                <navigationController storyboardIdentifier="nav" id="wgd-Ym-ENK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OtO-2q-6v3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.2470588235" green="0.80000000000000004" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VwO-OB-aL5" kind="relationship" relationship="rootViewController" id="XVD-xQ-tmA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1m-w2-aZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="-99"/>
+        </scene>
+        <!--Platos-->
+        <scene sceneID="Agy-hL-iAG">
+            <objects>
+                <viewController id="mJp-Lo-nZ4" customClass="PrincipalViewController" customModule="EnjoyEating" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FWr-tE-m6I"/>
+                        <viewControllerLayoutGuide type="bottom" id="uYV-Mk-ZNm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lzh-x9-DnP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Platos" selectedImage="food.png" id="L6T-EE-m7Y"/>
+                    <navigationItem key="navigationItem" title="Platos" id="eo1-Zv-jEM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xfr-EJ-6SH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="228"/>
+        </scene>
+        <!--Restaurantes-->
+        <scene sceneID="2hr-jT-vqj">
+            <objects>
+                <viewController id="V5p-4p-CWn" customClass="PrincipalViewController" customModule="EnjoyEating" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mdA-jR-5Kl"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uc0-ku-K2h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qcb-tQ-rBk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lhD-Rv-uol">
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oPr-cb-Tpt">
+                                <rect key="frame" x="0.0" y="108" width="414" height="29"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="Restaurantes"/>
+                                    <segment title="Tipos"/>
+                                </segments>
+                                <color key="tintColor" red="0.2470588235" green="0.80000000000000004" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="ChangeSegment:" destination="V5p-4p-CWn" eventType="valueChanged" id="xD9-BB-2mC"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ocs-NV-NjE">
+                                <rect key="frame" x="0.0" y="144" width="414" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestauranteCelda" rowHeight="124" id="Ejn-QD-wZa" customClass="RestauranteCell" customModule="EnjoyEating" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ejn-QD-wZa" id="dbp-Pp-DEI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4m-W6-7yO">
+                                                    <rect key="frame" x="25" y="9" width="109" height="104"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="109" id="51X-7o-Mte"/>
+                                                        <constraint firstAttribute="height" constant="104" id="jsJ-u4-ZkH"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaa-xf-d9C">
+                                                    <rect key="frame" x="142" y="51" width="264" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kaa-xf-d9C" firstAttribute="top" secondItem="dbp-Pp-DEI" secondAttribute="topMargin" constant="43" id="3cC-Uh-MtH"/>
+                                                <constraint firstItem="kaa-xf-d9C" firstAttribute="leading" secondItem="d4m-W6-7yO" secondAttribute="trailing" constant="8" id="SkX-ZW-I5H"/>
+                                                <constraint firstItem="kaa-xf-d9C" firstAttribute="trailing" secondItem="dbp-Pp-DEI" secondAttribute="trailingMargin" id="YBb-4D-DqO"/>
+                                                <constraint firstItem="d4m-W6-7yO" firstAttribute="top" secondItem="dbp-Pp-DEI" secondAttribute="topMargin" constant="1" id="bGv-99-zTc"/>
+                                                <constraint firstItem="kaa-xf-d9C" firstAttribute="leading" secondItem="d4m-W6-7yO" secondAttribute="trailing" constant="8" id="bsy-VY-YIQ"/>
+                                                <constraint firstItem="d4m-W6-7yO" firstAttribute="leading" secondItem="dbp-Pp-DEI" secondAttribute="leadingMargin" constant="17" id="n2L-8e-Y0f"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imagen" destination="d4m-W6-7yO" id="Xpt-mN-akm"/>
+                                            <outlet property="nombre" destination="kaa-xf-d9C" id="DSN-Tf-Yq9"/>
+                                            <segue destination="RwU-TK-Otr" kind="show" identifier="detalles" id="xb0-Fg-Hqt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="V5p-4p-CWn" id="x2y-GO-Nt2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oPr-cb-Tpt" firstAttribute="leading" secondItem="Qcb-tQ-rBk" secondAttribute="leadingMargin" constant="-20" id="0g1-Yr-4gx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oPr-cb-Tpt" secondAttribute="trailing" constant="-20" id="7Gv-jP-d8P"/>
+                            <constraint firstItem="lhD-Rv-uol" firstAttribute="top" secondItem="mdA-jR-5Kl" secondAttribute="bottom" id="8qI-JU-aTH"/>
+                            <constraint firstItem="Ocs-NV-NjE" firstAttribute="bottom" secondItem="Uc0-ku-K2h" secondAttribute="top" id="KPZ-My-uvg"/>
+                            <constraint firstItem="oPr-cb-Tpt" firstAttribute="top" secondItem="lhD-Rv-uol" secondAttribute="bottom" id="KdO-2F-tO9"/>
+                            <constraint firstItem="lhD-Rv-uol" firstAttribute="trailing" secondItem="oPr-cb-Tpt" secondAttribute="trailing" id="Kit-F5-ZBh"/>
+                            <constraint firstItem="Ocs-NV-NjE" firstAttribute="leading" secondItem="Qcb-tQ-rBk" secondAttribute="leading" id="LTT-au-fOU"/>
+                            <constraint firstAttribute="trailing" secondItem="Ocs-NV-NjE" secondAttribute="trailing" id="MDh-H9-lsJ"/>
+                            <constraint firstItem="lhD-Rv-uol" firstAttribute="leading" secondItem="oPr-cb-Tpt" secondAttribute="leading" id="fDm-uc-YMm"/>
+                            <constraint firstItem="Ocs-NV-NjE" firstAttribute="top" secondItem="oPr-cb-Tpt" secondAttribute="bottom" constant="8" id="mwU-9K-46S"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="/Users/isaaristi/MovileIos/EnjoyEating/EnjoyEating/home.png" selectedImage="home.png" id="VgE-gL-Jf0"/>
+                    <navigationItem key="navigationItem" title="Restaurantes" id="PXF-DA-wWP"/>
+                    <connections>
+                        <outlet property="controller" destination="oPr-cb-Tpt" id="zks-RJ-LXy"/>
+                        <outlet property="table" destination="Ocs-NV-NjE" id="Tn3-5J-h4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FLP-jj-b3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1507.2463768115942" y="-427.17391304347831"/>
+        </scene>
+        <!--Detalles-->
+        <scene sceneID="yoX-2m-hjN">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="detalles" storyboardName="Detalles" id="RwU-TK-Otr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7V-7D-nSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2144" y="-629"/>
+        </scene>
+        <!--Tipos View Controller-->
+        <scene sceneID="SiZ-Zk-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Tipos" id="QPG-SL-kfH" customClass="TiposViewController" customModule="EnjoyEating" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YBV-VF-r1c"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fX-a8-fos"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pPH-DH-lg9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.49803921569999998" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYs-Qk-j5o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2585" y="-195"/>
+        </scene>
+        <!--Restaurante View Controller-->
+        <scene sceneID="bed-86-Yzh">
+            <objects>
+                <viewController storyboardIdentifier="Restaurante" id="3tR-r2-azr" customClass="RestauranteViewController" customModule="EnjoyEating" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Eh-Vg-hpk"/>
+                        <viewControllerLayoutGuide type="bottom" id="cdq-Hr-3PH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Ns-zr-WeH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2470588235" green="0.80000000000000004" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RoW-yv-z11" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2590" y="-857"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fLE-w2-g4J">
+            <objects>
+                <tabBarController id="VwO-OB-aL5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hSo-oQ-6Y0"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="4wV-sr-uEM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.2470588235" green="0.80000000000000004" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.2470588235" green="0.80000000000000004" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V5p-4p-CWn" kind="relationship" relationship="viewControllers" id="Xff-y0-f1D"/>
+                        <segue destination="mJp-Lo-nZ4" kind="relationship" relationship="viewControllers" id="cen-Wq-CUa"/>
+                        <segue destination="ISc-fL-6LD" kind="relationship" relationship="viewControllers" id="0V4-Z4-m6U"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5r-H3-KZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="559" y="-100"/>
+        </scene>
+        <!--Mi Perfil-->
+        <scene sceneID="dQ2-Yc-NIL">
+            <objects>
+                <viewController id="ISc-fL-6LD" customClass="PrincipalViewController" customModule="EnjoyEating" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="woX-MN-bLQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLy-9T-AiZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fy8-3H-TGp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Perfil" selectedImage="user.png" id="wk1-XK-3Fp"/>
+                    <navigationItem key="navigationItem" title="Mi Perfil" id="Ctc-WZ-3EP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAw-is-JNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="558" y="658"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="/Users/isaaristi/MovileIos/EnjoyEating/EnjoyEating/home.png" width="16" height="16"/>
+        <image name="food.png" width="24" height="24"/>
+        <image name="home.png" width="24" height="24"/>
+        <image name="user.png" width="24" height="24"/>
+    </resources>
+</document>
