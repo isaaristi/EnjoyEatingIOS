@@ -8,11 +8,23 @@
 
 import UIKit
 
-class TiposViewController: UIViewController {
+class TiposViewController: UIViewController, UITableViewDataSource {
 
+    @IBOutlet weak var table: UITableView!
+    
+    var tipo_dato: [Tipo] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        tipo_dato = [
+            
+            Tipo(nom: "Restaurante tradicional", img: "dish.png", valor: "tradicional"),
+            Tipo(nom: "Restaurante tipico", img: "saladlogo.png", valor: "tipico"),
+            Tipo(nom: "Comida rápida", img: "sandwich.png", valor: "rapidas")
+            
+        ]
+        
         // Do any additional setup after loading the view.
     }
 
@@ -20,6 +32,26 @@ class TiposViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tipo_dato.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TiposCelda") as! TiposCell
+        let t = tipo_dato[indexPath.row]
+        
+        cell.nom.text = t.nom
+        cell.img.image = UIImage (named: t.img)
+        
+        
+        return cell
+    }
+
     
 
     /*
