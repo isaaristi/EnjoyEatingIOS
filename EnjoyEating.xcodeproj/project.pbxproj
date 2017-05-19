@@ -29,6 +29,7 @@
 		9C8BE0871ECF2B3500CF2789 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE0861ECF2B3500CF2789 /* Users.swift */; };
 		9C8BE0891ECF2DD700CF2789 /* UsuariosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE0881ECF2DD700CF2789 /* UsuariosApi.swift */; };
 		9C8BE08B1ECF4AB500CF2789 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE08A1ECF4AB500CF2789 /* MenuViewController.swift */; };
+		9C8BE08D1ECF6B6100CF2789 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE08C1ECF6B6100CF2789 /* MenuCell.swift */; };
 		9CA170281ECCED89003EFC83 /* RestauranteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA170271ECCED89003EFC83 /* RestauranteApi.swift */; };
 		9CA170301ECD232A003EFC83 /* dish.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA170291ECD232A003EFC83 /* dish.png */; };
 		9CA170311ECD232A003EFC83 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1702A1ECD232A003EFC83 /* food.png */; };
@@ -70,6 +71,7 @@
 		9C8BE0861ECF2B3500CF2789 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		9C8BE0881ECF2DD700CF2789 /* UsuariosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosApi.swift; sourceTree = "<group>"; };
 		9C8BE08A1ECF4AB500CF2789 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9C8BE08C1ECF6B6100CF2789 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		9CA170271ECCED89003EFC83 /* RestauranteApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestauranteApi.swift; sourceTree = "<group>"; };
 		9CA170291ECD232A003EFC83 /* dish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dish.png; path = imagenes/dish.png; sourceTree = "<group>"; };
 		9CA1702A1ECD232A003EFC83 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food.png; path = imagenes/food.png; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				9CC404D51ECC7769009F6836 /* RestauranteCell.swift */,
 				9C8BE0801ECE817400CF2789 /* TiposCell.swift */,
 				9C8BE0841ECE989B00CF2789 /* PlatosCell.swift */,
+				9C8BE08C1ECF6B6100CF2789 /* MenuCell.swift */,
 			);
 			name = celdas;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				9CC404D31ECC7026009F6836 /* Menu.swift in Sources */,
 				9C688FB61ECA3B8E0023F95D /* ViewController.swift in Sources */,
 				9C8BE06B1ECDCFE300CF2789 /* DetallesViewController.swift in Sources */,
+				9C8BE08D1ECF6B6100CF2789 /* MenuCell.swift in Sources */,
 				9C8BE0871ECF2B3500CF2789 /* Users.swift in Sources */,
 				9C8BE0751ECDFD5300CF2789 /* tipo.swift in Sources */,
 				9CC404D11ECC6B57009F6836 /* Restaurante.swift in Sources */,

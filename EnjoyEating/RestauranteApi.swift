@@ -46,12 +46,16 @@ class RestauranteApi {
                 let menu_obj = Menu(nombre: menu_nombre!, precio: menu_precio!, imagen: menu_imagen!, ingredientes: menu_ingredientes!)
                 
                 dato.append(menu_obj)
+                
             }
             
             let restaurante_obj = Restaurante(placeid: placeid!, nombre: nombre!, logo: logo!, imagen: imagen!, direccion: direccion!, telefono: telefono!, menu: dato, tipo: tipo!)
             
+            dato = []
+            
             data.append(restaurante_obj)
         }
+            
         callback (data)
             
         }
