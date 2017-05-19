@@ -200,7 +200,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home.png" selectedImage="home.png" id="VgE-gL-Jf0"/>
-                    <navigationItem key="navigationItem" title="Restaurantes" id="PXF-DA-wWP"/>
+                    <navigationItem key="navigationItem" title="Restaurantes" id="PXF-DA-wWP">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="IV6-MG-vcO"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="Ocs-NV-NjE" id="Tn3-5J-h4U"/>
                     </connections>
@@ -256,6 +258,9 @@
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="tZz-63-rx1">
                                 <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ISc-fL-6LD" id="6Oz-8a-NHs"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="453" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4zM-dw-83o">
                                 <rect key="frame" x="0.0" y="108" width="414" height="579"/>
@@ -277,7 +282,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khk-EC-gmV">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khk-EC-gmV">
                                                     <rect key="frame" x="8" y="332" width="398" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

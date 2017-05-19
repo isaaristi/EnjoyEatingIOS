@@ -26,6 +26,9 @@
 		9C8BE0811ECE817400CF2789 /* TiposCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE0801ECE817400CF2789 /* TiposCell.swift */; };
 		9C8BE0831ECE983800CF2789 /* PlatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE0821ECE983800CF2789 /* PlatosViewController.swift */; };
 		9C8BE0851ECE989B00CF2789 /* PlatosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE0841ECE989B00CF2789 /* PlatosCell.swift */; };
+		9C8BE0871ECF2B3500CF2789 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE0861ECF2B3500CF2789 /* Users.swift */; };
+		9C8BE0891ECF2DD700CF2789 /* UsuariosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE0881ECF2DD700CF2789 /* UsuariosApi.swift */; };
+		9C8BE08B1ECF4AB500CF2789 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8BE08A1ECF4AB500CF2789 /* MenuViewController.swift */; };
 		9CA170281ECCED89003EFC83 /* RestauranteApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA170271ECCED89003EFC83 /* RestauranteApi.swift */; };
 		9CA170301ECD232A003EFC83 /* dish.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA170291ECD232A003EFC83 /* dish.png */; };
 		9CA170311ECD232A003EFC83 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CA1702A1ECD232A003EFC83 /* food.png */; };
@@ -64,6 +67,9 @@
 		9C8BE0801ECE817400CF2789 /* TiposCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TiposCell.swift; sourceTree = "<group>"; };
 		9C8BE0821ECE983800CF2789 /* PlatosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatosViewController.swift; sourceTree = "<group>"; };
 		9C8BE0841ECE989B00CF2789 /* PlatosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlatosCell.swift; sourceTree = "<group>"; };
+		9C8BE0861ECF2B3500CF2789 /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		9C8BE0881ECF2DD700CF2789 /* UsuariosApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuariosApi.swift; sourceTree = "<group>"; };
+		9C8BE08A1ECF4AB500CF2789 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		9CA170271ECCED89003EFC83 /* RestauranteApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestauranteApi.swift; sourceTree = "<group>"; };
 		9CA170291ECD232A003EFC83 /* dish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dish.png; path = imagenes/dish.png; sourceTree = "<group>"; };
 		9CA1702A1ECD232A003EFC83 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = food.png; path = imagenes/food.png; sourceTree = "<group>"; };
@@ -164,6 +170,7 @@
 			children = (
 				9C8BE0681ECDCBDC00CF2789 /* Detalles.storyboard */,
 				9C8BE06A1ECDCFE300CF2789 /* DetallesViewController.swift */,
+				9C8BE08A1ECF4AB500CF2789 /* MenuViewController.swift */,
 			);
 			name = Detalles;
 			sourceTree = "<group>";
@@ -172,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				9CA170271ECCED89003EFC83 /* RestauranteApi.swift */,
+				9C8BE0881ECF2DD700CF2789 /* UsuariosApi.swift */,
 			);
 			name = net;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 				9CC404D01ECC6B57009F6836 /* Restaurante.swift */,
 				9CC404D21ECC7026009F6836 /* Menu.swift */,
 				9C8BE0741ECDFD5300CF2789 /* tipo.swift */,
+				9C8BE0861ECF2B3500CF2789 /* Users.swift */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -355,6 +364,7 @@
 				9CC404D31ECC7026009F6836 /* Menu.swift in Sources */,
 				9C688FB61ECA3B8E0023F95D /* ViewController.swift in Sources */,
 				9C8BE06B1ECDCFE300CF2789 /* DetallesViewController.swift in Sources */,
+				9C8BE0871ECF2B3500CF2789 /* Users.swift in Sources */,
 				9C8BE0751ECDFD5300CF2789 /* tipo.swift in Sources */,
 				9CC404D11ECC6B57009F6836 /* Restaurante.swift in Sources */,
 				9C8BE07E1ECE7E6700CF2789 /* RestauranteViewController.swift in Sources */,
@@ -362,7 +372,9 @@
 				9CC404CE1ECC66FA009F6836 /* PrincipalViewController.swift in Sources */,
 				9C688FC61ECA6D5C0023F95D /* RegistroViewController.swift in Sources */,
 				9CC404D61ECC7769009F6836 /* RestauranteCell.swift in Sources */,
+				9C8BE08B1ECF4AB500CF2789 /* MenuViewController.swift in Sources */,
 				9C8BE0831ECE983800CF2789 /* PlatosViewController.swift in Sources */,
+				9C8BE0891ECF2DD700CF2789 /* UsuariosApi.swift in Sources */,
 				9C688FB41ECA3B8E0023F95D /* AppDelegate.swift in Sources */,
 				9CA170281ECCED89003EFC83 /* RestauranteApi.swift in Sources */,
 			);

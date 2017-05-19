@@ -51,7 +51,8 @@ class PlatosViewController: UIViewController, UITableViewDataSource {
         cell.nombre.text = p.nombre
         cell.imagen.sd_setImage(with: URL(string:p.imagen))
         cell.precio.text = p.precio
-        cell.ingredientes.text = [NSString .strings(p.ingredientes)]
+        cell.ingredientes.text = p.ingredientes.joined(separator: ", ")
+        
 
         return cell
     }

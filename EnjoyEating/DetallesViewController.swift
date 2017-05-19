@@ -27,7 +27,7 @@ class DetallesViewController: UIViewController {
         nombre.text = restaurante.nombre
         id.text = restaurante.placeid
         direccion.text = restaurante.direccion
-        //telefono.text = restaurante.telefono
+        telefono.text = restaurante.telefono
         tipo.text = restaurante.tipo
         imagen.sd_setImage(with: URL(string: restaurante.imagen))
                
@@ -38,6 +38,15 @@ class DetallesViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "menu" {
+            
+            let destination = segue.destination as! MenuViewController
+            
+            destination.menu = restaurante.menu
+        }
     }
     
 
