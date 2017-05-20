@@ -8,9 +8,11 @@
 
 import UIKit
 import SDWebImage
+import MapKit
 
 class DetallesViewController: UIViewController {
 
+    //Popayán, Cauca, Colombia 2.452473, -76.602895
     
     var restaurante: Restaurante!
     
@@ -21,6 +23,28 @@ class DetallesViewController: UIViewController {
     @IBOutlet weak var nombre: UILabel!
     @IBOutlet weak var imagen: UIImageView!
     
+    
+    
+    
+    @IBAction func Mapa(_ sender: Any) {
+        
+        //definiendo el destino
+        
+        let latitude: CLLocationDegrees = 2.452473
+        let longitude: CLLocationDegrees = -76.602895
+        
+        let regionDistance: CLLocationDistance = 1000;
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = restaurante.nombre
+        mapItem.openInMaps(launchOptions: options)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
