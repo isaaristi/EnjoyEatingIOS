@@ -15,6 +15,11 @@ class DetallesViewController: UIViewController {
     //Popayán, Cauca, Colombia 2.452473, -76.602895
     
     var restaurante: Restaurante!
+    var api: MapaApi!
+    var data: Mapa!
+    
+    var lat: CLLocationDegrees = 2.452473
+    var long: CLLocationDegrees = -76.602895
     
     @IBOutlet weak var tipo: UILabel!
     @IBOutlet weak var telefono: UILabel!
@@ -24,14 +29,12 @@ class DetallesViewController: UIViewController {
     @IBOutlet weak var imagen: UIImageView!
     
     
-    
-    
     @IBAction func Mapa(_ sender: Any) {
         
         //definiendo el destino
         
-        let latitude: CLLocationDegrees = 2.452473
-        let longitude: CLLocationDegrees = -76.602895
+        let latitude: CLLocationDegrees = lat
+        let longitude: CLLocationDegrees = long
         
         let regionDistance: CLLocationDistance = 1000;
         let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
@@ -49,12 +52,17 @@ class DetallesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nombre.text = restaurante.nombre
-        id.text = restaurante.placeid
         direccion.text = restaurante.direccion
         telefono.text = restaurante.telefono
         tipo.text = restaurante.tipo
         imagen.sd_setImage(with: URL(string: restaurante.imagen))
-               
+        
+        api = MapaApi()
+        
+        api.getMapa(placeid: restaurante.placeid) { (mapa) in
+            self.lat = mapa.latitud
+            self.long = mapa.longitud
+        }
 
         // Do any additional setup after loading the view.
     }
