@@ -17,6 +17,8 @@ class DetallesViewController: UIViewController {
     var restaurante: Restaurante!
     var api: MapaApi!
     var data: Mapa!
+    var api1 : GuardarApi!
+    var api2: EstuveApi!
     
     var lat: CLLocationDegrees = 2.452473
     var long: CLLocationDegrees = -76.602895
@@ -91,16 +93,35 @@ class DetallesViewController: UIViewController {
             }
         }
     }
+
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func guardar(_ sender: Any) {
+        
+        let idUs = UserDefaults().object(forKey: "username") as? String
+        let placeid = restaurante.placeid
+        let nombre = restaurante.nombre
+        let imagen = restaurante.imagen
+        
+        api1 = GuardarApi()
+        
+        api1.addGuardar(idUs: idUs!, placeid: placeid, nombre: nombre, imagen: imagen) { (guardar) in
+            
+            self.viewDidLoad()
+        }
+        
     }
-    */
-
+    
+    @IBAction func estuve(_ sender: Any) {
+        let idUs = UserDefaults().object(forKey: "username") as? String
+        let placeid = restaurante.placeid
+        let nombre = restaurante.nombre
+        let imagen = restaurante.imagen
+        
+        api2 = EstuveApi()
+        
+        api2.addEstuve(idUs: idUs!, placeid: placeid!, nombre: nombre!, imagen: imagen!) { (guardar) in
+            
+            self.viewDidLoad()
+        }
+    }
 }

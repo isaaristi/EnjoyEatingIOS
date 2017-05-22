@@ -7,3 +7,48 @@
 //
 
 import Foundation
+import Alamofire
+
+class GuardarApi {
+    
+    let url = "https://test-isabel-restaurante.herokuapp.com/guardar"
+    
+    func getGuardar(idUs: String, callback: @escaping (Array<Guardar>) -> Void) {
+        
+        var data: [Guardar]  = []
+        
+        Alamofire.request(url + "/" + idUs, method: .get).responseJSON { (response) in
+            
+            var json = [NSDictionary]()
+            json = response.result.value as! [NSDictionary]
+            
+            for i in 0 ..< json.count{
+                let guardar = json[i]
+                let idUs = guardar["idUs"] as! String!
+                let placeid = guardar["placeid"] as? String
+                let nombre = guardar["nombre"] as? String
+                let imagen = guardar["imagen"] as? String
+                
+                let guardar_obj = Guardar(idUs: idUs!, placeid: placeid!, nombre: nombre!,  imagen: imagen!)
+                
+                data.append(guardar_obj)
+        }
+            callback (data)
+    }
+}
+    
+    func addGuardar(idUs: String, placeid: String, nombre: String,  imagen: String, callback: @escaping (Bool) -> Void){
+        let parametros: Parameters = ["idUs": idUs, "placeid": placeid, "nombre": nombre, "imagen": nombre]
+        
+        Alamofire.request(url, method: .post, parameters: parametros).responseJSON{ (response) in
+
+            let json = response.result.value as! NSDictionary
+            
+            let succ = json["success"] as! Bool
+            if succ {
+                print("Restaurante guardado registrado con exito")
+                callback(true)
+            }
+        }
+    }
+}
