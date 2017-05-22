@@ -11,14 +11,14 @@ import Alamofire
 
 class ResenaApi {
     
-    let url = "https://test-isabel-restaurante.herokuapp.com/resena/"
+    let url = "https://test-isabel-restaurante.herokuapp.com/resena"
     
     
     func getResenas(idRes: String, callback: @escaping (Array<Resena>) -> Void) {
         
         var data: [Resena]  = []
         
-        Alamofire.request(url + idRes, method: .get).responseJSON { (response) in
+        Alamofire.request(url + "/" + idRes, method: .get).responseJSON { (response) in
             
             var json = [NSDictionary]()
             json = response.result.value as! [NSDictionary]
@@ -35,6 +35,21 @@ class ResenaApi {
             }
             callback(data)
             
+        }
+    }
+    
+    func addResena(idRes: String, idUs: String, descripcion: String, callback: @escaping (Bool) -> Void){
+        let parametros: Parameters=["idRes": idRes, "idUs": idUs, "descripcion": descripcion]
+        
+        Alamofire.request(url, method: .post, parameters: parametros).responseJSON{ (response) in
+            
+            let json = response.result.value as! [String: Any]
+            
+            let succ = json["success"] as! Bool
+            if succ {
+                print("Reseña registrada con exito")
+                callback(true)
+            }
         }
     }
     

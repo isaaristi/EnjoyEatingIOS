@@ -21,12 +21,15 @@ class ResenaViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var table: UITableView!
     
+    @IBOutlet weak var descri: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        placeid.text = UserDefaults().object(forKey: "username") as? String
         nombre.text = resenaRes
-        placeid.text = resenaId
+       // placeid.text = resenaId
         
         api = ResenaApi()
         
@@ -61,6 +64,21 @@ class ResenaViewController: UIViewController, UITableViewDataSource {
         cell.descripcion.text = r.descripcion
         
         return cell
+    }
+    
+    
+    @IBAction func enviar(_ sender: Any) {
+        
+        let idRes = resenaId
+        let idUs = UserDefaults().object(forKey: "username") as? String
+        let descripcion = descri.text
+        
+        api = ResenaApi()
+        
+        api.addResena(idRes: idRes!, idUs: idUs!, descripcion: descripcion!) { (resena) in
+            self.table.reloadData()
+        }
+        
     }
    
 
