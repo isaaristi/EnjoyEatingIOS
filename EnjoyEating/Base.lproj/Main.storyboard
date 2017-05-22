@@ -29,18 +29,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre de usuario" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jVo-GR-6Eh">
-                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <rect key="frame" x="16" y="318.5" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZI-O5-G5t">
-                                <rect key="frame" x="16" y="366" width="343" height="30"/>
+                                <rect key="frame" x="16" y="366.5" width="343" height="30"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrq-Ib-G5m">
-                                <rect key="frame" x="16" y="245" width="343" height="34"/>
+                                <rect key="frame" x="16" y="245.5" width="343" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="u7K-Kh-bKn"/>
                                 </constraints>
@@ -56,11 +57,11 @@
                                     <constraint firstAttribute="width" constant="137" id="iJK-R5-wCa"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="kea-8d-9HZ">
-                                <rect key="frame" x="81" y="434" width="213" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="VCK-1R-ZOl">
+                                <rect key="frame" x="58" y="447" width="259" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="nfw-FX-RGL">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="77" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <state key="normal" title="Registrarse">
                                             <color key="titleColor" red="0.80000000000000004" green="0.49803921569999998" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,7 +71,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Gyv-98-D1V">
-                                        <rect key="frame" x="128" y="0.5" width="85" height="29"/>
+                                        <rect key="frame" x="177" y="0.5" width="82" height="29"/>
                                         <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <state key="normal" title="Iniciar sesión">
@@ -88,19 +89,19 @@
                             <constraint firstItem="jVo-GR-6Eh" firstAttribute="top" secondItem="hrq-Ib-G5m" secondAttribute="bottom" constant="39" id="2fJ-CK-9t1"/>
                             <constraint firstItem="28z-E9-4Tn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="103" id="4Cy-VB-FnY"/>
                             <constraint firstItem="hrq-Ib-G5m" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7rn-g7-t1i"/>
+                            <constraint firstItem="VCK-1R-ZOl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="42" id="D9R-fs-VWk"/>
                             <constraint firstItem="sZI-O5-G5t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DoM-Rh-1mQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kea-8d-9HZ" secondAttribute="trailing" constant="65" id="Doe-d2-j94"/>
                             <constraint firstItem="GVn-aA-2m7" firstAttribute="top" secondItem="28z-E9-4Tn" secondAttribute="bottom" constant="28" id="H7U-qR-lTR"/>
                             <constraint firstItem="GVn-aA-2m7" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="N0A-ge-luU"/>
                             <constraint firstItem="sZI-O5-G5t" firstAttribute="top" secondItem="jVo-GR-6Eh" secondAttribute="bottom" constant="18" id="PvM-S6-Rly"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VCK-1R-ZOl" secondAttribute="trailing" constant="42" id="QRl-IM-MjJ"/>
                             <constraint firstItem="jVo-GR-6Eh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="U59-n9-9Gc"/>
                             <constraint firstItem="hrq-Ib-G5m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bMi-OF-CEb"/>
-                            <constraint firstItem="kea-8d-9HZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="du8-mH-Qft"/>
                             <constraint firstItem="28z-E9-4Tn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fF0-tO-U3U"/>
                             <constraint firstItem="GVn-aA-2m7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jzF-gn-7nF"/>
                             <constraint firstItem="hrq-Ib-G5m" firstAttribute="top" secondItem="GVn-aA-2m7" secondAttribute="bottom" constant="25.5" id="nUU-qN-CSG"/>
-                            <constraint firstItem="kea-8d-9HZ" firstAttribute="top" secondItem="sZI-O5-G5t" secondAttribute="bottom" constant="38" id="npk-9F-C7f"/>
                             <constraint firstItem="jVo-GR-6Eh" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="p7Q-Sg-Faz"/>
+                            <constraint firstItem="VCK-1R-ZOl" firstAttribute="top" secondItem="sZI-O5-G5t" secondAttribute="bottom" constant="50.5" id="r4e-WF-bem"/>
                             <constraint firstItem="sZI-O5-G5t" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="se1-kh-dRg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="28z-E9-4Tn" secondAttribute="trailing" constant="103" id="yA7-Kh-AtY"/>
                         </constraints>
@@ -171,11 +172,11 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="112" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-YJ-x6X">
-                                <rect key="frame" x="29" y="415" width="316" height="36"/>
+                                <rect key="frame" x="29" y="415" width="316" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s4p-Jh-CHJ">
-                                        <rect key="frame" x="0.0" y="0.5" width="83" height="35"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Cancelar">
                                             <color key="titleColor" red="0.80000000000000004" green="0.49803921569999998" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -184,9 +185,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-aP-Ygf">
-                                        <rect key="frame" x="195" y="0.0" width="121" height="36"/>
+                                        <rect key="frame" x="192.5" y="0.0" width="123.5" height="32"/>
                                         <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Registrarse">
                                             <color key="titleColor" red="0.80000000000000004" green="0.49803921569999998" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>

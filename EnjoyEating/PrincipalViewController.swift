@@ -13,6 +13,9 @@ class PrincipalViewController: UIViewController {
     
     
     @IBOutlet weak var container: UIView!
+    
+    @IBOutlet weak var nom: UILabel!
+    
     var pantalla1:UIViewController!
     var pantalla2:UIViewController!
     var prev:UIViewController!
@@ -21,6 +24,8 @@ class PrincipalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nom.text = UserDefaults().object(forKey: "username") as? String
+        
        pantalla1 = storyboard!.instantiateViewController(withIdentifier: "guardar")
         pantalla2 = storyboard!.instantiateViewController(withIdentifier: "estuve")
         prev = pantalla1

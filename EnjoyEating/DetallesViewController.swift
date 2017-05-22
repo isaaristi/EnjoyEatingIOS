@@ -17,7 +17,7 @@ class DetallesViewController: UIViewController {
     var restaurante: Restaurante!
     var api: MapaApi!
     var data: Mapa!
-    var api1 : GuardarApi!
+    var api1: GuardarApi!
     var api2: EstuveApi!
     
     var lat: CLLocationDegrees = 2.452473
@@ -106,7 +106,6 @@ class DetallesViewController: UIViewController {
         
         api1.addGuardar(idUs: idUs!, placeid: placeid, nombre: nombre, imagen: imagen) { (guardar) in
             
-            self.viewDidLoad()
         }
         
     }
@@ -119,9 +118,8 @@ class DetallesViewController: UIViewController {
         
         api2 = EstuveApi()
         
-        api2.addEstuve(idUs: idUs!, placeid: placeid!, nombre: nombre!, imagen: imagen!) { (guardar) in
+        api2.addEstuve(idUs: idUs!, placeid: placeid, nombre: nombre, imagen: imagen) { (estuve) in
             
-            self.viewDidLoad()
         }
     }
 }

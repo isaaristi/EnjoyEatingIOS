@@ -10,12 +10,14 @@ import UIKit
 
 class GuardarCell: UITableViewCell {
 
+    @IBOutlet weak var nombre: UILabel!
     
     @IBOutlet weak var imagen: UIImageView!
+    
     @IBAction func eliminar(_ sender: Any) {
     }
     
-    @IBOutlet weak var nombre: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

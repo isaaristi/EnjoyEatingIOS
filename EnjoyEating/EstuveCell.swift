@@ -13,6 +13,7 @@ class EstuveCell: UITableViewCell {
     @IBOutlet weak var eliminar: UIButton!
     @IBOutlet weak var nombre: UILabel!
     @IBOutlet weak var imagen: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -38,14 +38,15 @@ class GuardarApi {
 }
     
     func addGuardar(idUs: String, placeid: String, nombre: String,  imagen: String, callback: @escaping (Bool) -> Void){
-        let parametros: Parameters = ["idUs": idUs, "placeid": placeid, "nombre": nombre, "imagen": nombre]
+        
+        let parametros: Parameters = ["idUs": idUs, "placeid": placeid, "nombre": nombre, "imagen": imagen]
         
         Alamofire.request(url, method: .post, parameters: parametros).responseJSON{ (response) in
 
-            let json = response.result.value as! NSDictionary
+            let json = response.result.value as! [String: Any]
             
-            let succ = json["success"] as! Bool
-            if succ {
+            let success = json["success"] as! Bool
+            if success {
                 print("Restaurante guardado registrado con exito")
                 callback(true)
             }

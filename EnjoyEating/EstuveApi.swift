@@ -14,9 +14,9 @@ class EstuveApi {
     
     let url = "https://test-isabel-restaurante.herokuapp.com/estuve"
     
-    func getEstuve(idUs: String, callback: @escaping (Array<Guardar>) -> Void) {
+    func getEstuve(idUs: String, callback: @escaping (Array<Estuve>) -> Void) {
         
-        var data: [Guardar]  = []
+        var data: [Estuve]  = []
         
         Alamofire.request(url + "/" + idUs, method: .get).responseJSON { (response) in
             
@@ -30,7 +30,7 @@ class EstuveApi {
                 let nombre = guardar["nombre"] as? String
                 let imagen = guardar["imagen"] as? String
                 
-                let guardar_obj = Guardar(idUs: idUs!, placeid: placeid!, nombre: nombre!,  imagen: imagen!)
+                let guardar_obj = Estuve(idUs: idUs!, placeid: placeid!, nombre: nombre!,  imagen: imagen!)
                 
                 data.append(guardar_obj)
             }
