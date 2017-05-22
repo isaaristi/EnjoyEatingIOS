@@ -29,6 +29,26 @@ class DetallesViewController: UIViewController {
     @IBOutlet weak var imagen: UIImageView!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nombre.text = restaurante.nombre
+        id.text = restaurante.placeid
+        direccion.text = restaurante.direccion
+        telefono.text = restaurante.telefono
+        tipo.text = restaurante.tipo
+        imagen.sd_setImage(with: URL(string: restaurante.imagen))
+        
+        api = MapaApi()
+        
+        api.getMapa(placeid: restaurante.placeid) { (mapa) in
+            self.lat = mapa.latitud
+            self.long = mapa.longitud
+        }
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    
     @IBAction func Mapa(_ sender: Any) {
         
         //definiendo el destino
@@ -49,23 +69,6 @@ class DetallesViewController: UIViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        nombre.text = restaurante.nombre
-        direccion.text = restaurante.direccion
-        telefono.text = restaurante.telefono
-        tipo.text = restaurante.tipo
-        imagen.sd_setImage(with: URL(string: restaurante.imagen))
-        
-        api = MapaApi()
-        
-        api.getMapa(placeid: restaurante.placeid) { (mapa) in
-            self.lat = mapa.latitud
-            self.long = mapa.longitud
-        }
-
-        // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -78,6 +81,14 @@ class DetallesViewController: UIViewController {
             let destination = segue.destination as! MenuViewController
             
             destination.menu = restaurante.menu
+        }
+        else {
+            if segue.identifier == "resena" {
+                let destination = segue.destination as! ResenaViewController
+                
+                destination.resenaRes = restaurante.nombre
+                destination.resenaId = restaurante.placeid
+            }
         }
     }
     

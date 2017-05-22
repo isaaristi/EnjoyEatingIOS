@@ -14,11 +14,19 @@ class RegistroViewController: UIViewController {
     @IBOutlet weak var correo: UITextField!
     @IBOutlet weak var usuario: UITextField!
     
+    var userD: UserDefaults!
     
+    var api: UsuariosApi!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userD = UserDefaults()
+        
+        let username = userD.object(forKey: "username") as? String
+        usuario.text = username
+        let password = userD.object(forKey: "password") as? String
+        contrasena.text = password
         // Do any additional setup after loading the view.
     }
 
@@ -28,14 +36,23 @@ class RegistroViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func registro(_ sender: Any) {
+        let password = contrasena.text
+        let username = usuario.text
+        let email = correo.text
+        
+        api = UsuariosApi()
+        
+        api.registro(username: username!, email: email!, password: password!) { (usuario) in
+            
+            self.userD.set(username, forKey: "username")
+            self.userD.set(password, forKey: "password")
+            self.userD.set(true, forKey:"logged")
+            
+            self.performSegue(withIdentifier: "principal", sender: nil)
+            
+        }
     }
-    */
+  
 
 }

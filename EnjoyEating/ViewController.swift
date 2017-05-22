@@ -50,7 +50,7 @@ class ViewController: UIViewController {
                 self.userD.set(password, forKey: "password")
                 self.userD.set(true, forKey:"logged")
                 
-                self.performSegue(withIdentifier: "Principal", sender: nil)
+                self.performSegue(withIdentifier: "principal", sender: nil)
             }
             
             
@@ -68,6 +68,7 @@ class ViewController: UIViewController {
        // let principal = segue.destination as! RegistroViewController
         }
     }
+    
     
     @IBAction func goToMain(_ segue:UIStoryboardSegue){
         

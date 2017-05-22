@@ -16,6 +16,7 @@ class PrincipalViewController: UIViewController {
     var pantalla1:UIViewController!
     var pantalla2:UIViewController!
     var prev:UIViewController!
+    var userD: UserDefaults!
 
     
     override func viewDidLoad() {
@@ -80,6 +81,13 @@ class PrincipalViewController: UIViewController {
         content.willMove(toParentViewController: nil)
         content.view.removeFromSuperview()
         content.removeFromParentViewController()
+    }
+    
+    
+    
+    @IBAction func Logout(_ sender: Any) {
+        UserDefaults().set(false, forKey: "logged")
+        self.performSegue(withIdentifier: "logout", sender: nil)
     }
     
 
